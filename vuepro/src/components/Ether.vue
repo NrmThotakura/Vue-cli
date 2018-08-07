@@ -10,7 +10,7 @@
    name: 'Ether',
    data() {
      return {
-         price = 200
+         price : 200
      }
    },
    methods: {
