@@ -5,7 +5,7 @@ import Ether from './components/Ether.vue'
 Vue.config.productionTip = false
 
 new Vue({
-  render: h => h(Ether)
+  render: h => h(Ether)  
   }).$mount('#app')
 
 

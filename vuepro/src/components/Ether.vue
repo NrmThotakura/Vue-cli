@@ -12,7 +12,7 @@
    data() {
      return {
          price : 200,
-         message: 'Hello Vue.js!'
+         message: 'Hello Vue!'
      }
    },
    methods: {
