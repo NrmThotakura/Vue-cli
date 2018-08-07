@@ -1,8 +1,7 @@
 <template>
   <div class="hello">
     <h1>{{ price }}</h1>
-    <h1>{{ message }}</h1>
-    <input type="text" placeholder="Message ID"/>
+    <h1>{{ message }}</h1>    
     <button @click="clicking()">Change Value</button>
   </div>
 </template>
