@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <h1>{{ price }}</h1>
+    <h1>{{ message }}</h1>
     <button @click="clicking()">Change Value</button>
   </div>
 </template>
@@ -10,12 +10,14 @@
    name: 'Ether',
    data() {
      return {
-         price : 200
+         //price : 200
+         message: 'Hello Vue.js!'
      }
    },
    methods: {
       clicking() {
-         this.price = 300;
+         //this.price = 300;
+          this.message = this.message.split('').reverse().join('')
       }
    }
 }
