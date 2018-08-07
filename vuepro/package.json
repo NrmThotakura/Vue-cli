@@ -6,6 +6,7 @@
     
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
+    "start": "cross-env NODE_ENV=production node src/start",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
