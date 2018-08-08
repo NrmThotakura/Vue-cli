@@ -9,6 +9,7 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "dns": "^0.2.2",
     "mssql": "^4.1.0",
     "vue": "^2.5.16"
   },
