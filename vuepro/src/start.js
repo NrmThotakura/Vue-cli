@@ -5,22 +5,25 @@ var setUp = {
   user: "sa",
   password: "sa@1234"
 };
-function executeDatabaseActions(dbData) {
+function executeDatabaseActions() {
   sqlInstance.connect(setUp).then(function() {
     new sqlInstance.Request()
       // .query("CALL [Getmessage_Narmada]('2018-07-17', '2018-07-20')")
       .query("SELECT * FROM UnitType")
       .then(function(dbData) {
         if (dbData == null || dbData.length === 0)
-        return;
-        for (var i = 0; i < dbData.length; i++) {
-            var Sname = dbData[i].Name;
-            console.dir(Sname);
-        }
+        // return;
+        // //for (var i = 0; i < dbData.length; i++) {
+        //     var Sname = dbData[0].OTACode;
+        //     console.log(Sname);
+        // //}
+        res.send(dbData);
       });
   });
 }
-
+var server = app.listen(8080, function () {
+  console.log('Server is running..');
+});
 // const app = require('../server')
 
 // const port = process.env.PORT || 8080
