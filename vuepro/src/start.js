@@ -8,22 +8,38 @@ var setUp = {
   password: "sa@1234"
 };
 function executeDatabaseActions() {
-  sqlInstance.connect(setUp).then(function () {
-    new sqlInstance.Request()
-      .query("SELECT * FROM UnitType")
-      .then(function (dbData) {
-        if (dbData == null || dbData.length === 0)
-          return;
-        console.dir(dbData[0].ID);
-      })
-      .catch(function (error) {
+  try {
+    sqlInstance.connect(setUp)
+      .then(function () {
+
+        new sqlInstance.Request()
+          .query("select * from STUDENT")
+          .then(function (dbData) {
+            if (dbData == null || dbData.length === 0)
+              return;
+
+            for (var i = 0; i < dbData.length; i++) {
+
+              var Sname = dbData[i].Name;
+
+              console.dir(Sname);
+
+            }
+          })
+          .catch(function (error) {
+            console.dir(error);
+          });
+      }).catch(function (error) {
         console.dir(error);
       });
-  });
+  } catch (error) {
+    console.dir(error);
+  }
 }
-// var server = app.listen(8080, function () {
-//   console.log('Server is running..');
-// });
+//executeDatabaseActions();
+var server = app.listen(8080, function () {
+  console.log('Server is running..');
+});
 // const app = require('../server')
 
 // const port = process.env.PORT || 8080
