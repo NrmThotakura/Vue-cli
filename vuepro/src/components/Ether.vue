@@ -1,9 +1,7 @@
 <template>
    <div>
-      <h1>
-          {{ price }}
-      </h1>
-      <button @click="clicking()">Change Value</button>
+      <h1>Vue</h1>
+      <button @click="clicking()">Login Form</button>
   </div>
 </template>
 
@@ -11,12 +9,11 @@
    export default {
    data() {
          return {
-            price: 200
          };
       },
    methods: {
       clicking() {
-         this.price = 300;
+
       }
    }
   }
