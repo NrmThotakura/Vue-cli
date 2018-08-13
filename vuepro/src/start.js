@@ -1,3 +1,5 @@
+var express = require('express');
+var app = express();
 var sqlInstance = require("mssql");
 var setUp = {
   server: "192.168.1.126",
@@ -8,15 +10,9 @@ var setUp = {
 function executeDatabaseActions() {
   sqlInstance.connect(setUp).then(function() {
     new sqlInstance.Request()
-      // .query("CALL [Getmessage_Narmada]('2018-07-17', '2018-07-20')")
       .query("SELECT * FROM UnitType")
       .then(function(dbData) {
         if (dbData == null || dbData.length === 0)
-        // return;
-        // //for (var i = 0; i < dbData.length; i++) {
-        //     var Sname = dbData[0].OTACode;
-        //     console.log(Sname);
-        // //}
         res.send(dbData);
       });
   });
