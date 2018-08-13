@@ -12,28 +12,11 @@ function executeDatabaseActions(dbData) {
       .query("SELECT * FROM UnitType")
       .then(function(dbData) {
         if (dbData == null || dbData.length === 0)
-          $.ajax({
-            dataType: "json",
-            type: "POST",
-            contentType: "application/json;charset=utf-8",
-            url: "http://localhost:8080/",
-            data: JSON.stringify(dbData),
-            success: function(dbData) {
-              console.log(dbData);
-              if (dbData.length > 0) {
-              //return  alert(dbData[0].name)
-              res.end(JSON.stringify(results));
-              } else {
-                // if (response.errno) {
-                //   self.errLoginMsg("Server Error: " + response.errno);
-                // } else self.alert("No Data");
-                alert("No Data");
-              }
-            },
-            // error: function(d) {
-            //   console.log(d);
-            // }
-          });
+        return;
+        for (var i = 0; i < dbData.length; i++) {
+            var Sname = dbData[i].Name;
+            console.dir(Sname);
+        }
       });
   });
 }
