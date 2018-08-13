@@ -9,6 +9,7 @@
 <script>
 import HelloWorld from './components/HelloWorld.vue'
 import ether from './components/Ether.vue'
+//import app from '/app.js'
 
 export default {
   name: 'app',
