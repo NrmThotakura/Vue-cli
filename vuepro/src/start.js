@@ -17,12 +17,11 @@ function executeDatabaseActions() {
           .then(function (dbData) {
             if (dbData == null || dbData.length === 0)
               return;
-
             for (var i = 0; i < dbData.length; i++) {
-
               var Sname = dbData[i].Name;
-
-              console.dir(Sname);
+              res.writeHead(200, { 'Content-Type': 'application/json' });  
+              res.send(Sname);
+              res.end();
 
             }
           })
@@ -40,3 +39,7 @@ function executeDatabaseActions() {
 var server = app.listen(8080, function () {
   console.log('Server is running..');
 });
+
+
+
+
