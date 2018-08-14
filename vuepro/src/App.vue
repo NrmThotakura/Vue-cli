@@ -21,7 +21,7 @@
         },
         mounted() {
             if(!this.authenticated) {
-                this.$router.replace({ name: "login" });
+                this.$router.replace({ name: "LoginForm" });
             }
         },
         methods: {
