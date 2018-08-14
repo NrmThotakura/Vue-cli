@@ -1,17 +1,18 @@
 <template>
   <div id="app">
-    <Ether msg="Ethereum" />
+    <!--<Ether msg="Ethereum" />-->
+    <router-link to=".components/LoginForm.vue">loginForm</router-link>
   </div>
 </template>
 
 <script>
-import Ether from './components/Ether.vue';
-//import LoginForm from './components/LoginForm.html';
+//import Ether from './components/Ether.vue';
+import LoginForm from './components/LoginForm.html';
 export default {
   name: 'app',
   components: {
-    Ether,
-    //LoginForm
+    //Ether,
+    LoginForm
   }
 }
 </script>
