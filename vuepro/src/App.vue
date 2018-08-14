@@ -6,10 +6,12 @@
 
 <script>
 import Ether from './components/Ether.vue';
+//import LoginForm from './components/LoginForm.html';
 export default {
   name: 'app',
   components: {
-    Ether
+    Ether,
+    //LoginForm
   }
 }
 </script>

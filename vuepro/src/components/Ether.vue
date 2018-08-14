@@ -15,6 +15,7 @@ export default {
   methods: {
     clicking() {
       alert("Click")
+      window.location.href = "./components/LoginForm.html";
     }
   }
 };

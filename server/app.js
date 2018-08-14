@@ -13,7 +13,7 @@ app.get('/', function (req, res) {
         database: 'SampleTest' 
     };
     new sql.ConnectionPool(config).connect().then(pool => {
-      return pool.request().query("select * from Student")
+      return pool.request().query("select * from Users")
       }).then(result => {
         let rows = result.recordset
         res.setHeader('Access-Control-Allow-Origin', '*')

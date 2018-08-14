@@ -1,3 +1,5 @@
+//importing Vue, along with our root App.js component
+
 import Vue from 'vue'
 import App from './App.vue'
 
