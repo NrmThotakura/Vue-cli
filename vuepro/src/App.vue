@@ -6,7 +6,6 @@
 
 <script>
 import Ether from './components/Ether.vue';
-
 export default {
   name: 'app',
   components: {
