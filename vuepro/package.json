@@ -12,7 +12,8 @@
     "dns": "^0.2.2",
     "mssql": "^4.1.0",
     "node-fetch": "^2.2.0",
-    "vue": "^2.5.16"
+    "vue": "^2.5.16",
+    "vue-router": "^3.0.1"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.0.0-rc.10",
