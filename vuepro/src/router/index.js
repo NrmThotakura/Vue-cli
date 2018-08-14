@@ -1,18 +1,12 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import LoginForm from './components/Ether.vue'
-import success from './components/success.vue'
+import LoginForm from './components/LoginForm.vue'
+import success from './components/Success.vue'
 
 Vue.use(Router)
 
 export default new Router({
     routes: [
-        {
-            path: '/',
-            redirect: {
-                name: "login"
-            }
-        },
         {
             path: "/LoginForm",
             name: "LoginForm",
