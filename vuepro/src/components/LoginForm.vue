@@ -20,9 +20,11 @@
         methods: {
             login() {
                 if(this.input.username != "" && this.input.password != "") {
-                    if(this.input.username == this.username && this.input.password == this.password) {
-                        this.$emit("authenticated", true);
-                        this.router({ name: "login" });
+                    if(this.input.username == this.testAccount.username && this.input.password == this.testAccount.password) {
+                        this.authenticated = true
+                        //this.router({ name: "LoginForm" });
+                        console.log(this.username)
+                        console.log(this.password)
                     } else {
                         console.log("The username and / or password is incorrect");
                     }
