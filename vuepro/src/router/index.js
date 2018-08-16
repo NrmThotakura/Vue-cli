@@ -8,12 +8,6 @@ Vue.use(Router)
 export default new Router({
     routes: [
         {
-            path: '/',
-            redirect: {
-                name: "login"
-            }
-        },
-        {
             path: "/LoginForm",
             name: "LoginForm",
             component: LoginForm

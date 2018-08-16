@@ -1,7 +1,6 @@
 <template>
     <div id="login">
         <h1>Login</h1>
-           <h1>{{ input.username }}</h1>
         <input type="text" name="username" v-model="input.username" placeholder="Username" />
         <input type="password" name="password" v-model="input.password" placeholder="Password" />
         <button type="button" v-on:click="login()">Login</button>
@@ -21,16 +20,14 @@
         methods: {
             login() {
                 if(this.input.username != "" && this.input.password != "") {
-                    if(this.input.username == this.testAccount.username && this.input.password == this.testAccount.password) {
-                        this.authenticated = true
-                        //this.router({ name: "LoginForm" });
-                        console.log(this.username)
-                        console.log(this.password)
+                    if(this.input.username == this.$parent.testAccount.username && this.input.password == this.$parent.testAccount.password) {
+                       this.authenticated = true
+                        this.$router.push({ path: "success" });
                     } else {
-                        console.log("The username and / or password is incorrect");
+                        alert("The username and / or password is incorrect");
                     }
                 } else {
-                    console.log("A username and password must be present");
+                    alert("A username and password must be present");
                 }
             }
         }
