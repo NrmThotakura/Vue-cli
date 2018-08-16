@@ -2,7 +2,6 @@
     <div id="app">
         <div id="nav">
             <router-link v-if="authenticated" to="./components/LoginForm.vue" v-on:click.native="logout()" replace>Logout</router-link>
-           <!-- <router-link to="./components/LoginForm.vue" tag="button" v-on:click.native="logout()" replace>Logout</router-link>-->
         </div>
        <router-view @authenticated="setAuthenticated" />
     </div>
@@ -31,7 +30,6 @@ export default {
     },
     logout() {
       this.authenticated = false;
-      // alert("Logout Successfully")
     }
   }
 };
