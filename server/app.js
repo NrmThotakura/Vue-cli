@@ -8,8 +8,8 @@ app.get('/', function (req, res) {
     var sql = require("mssql");
     var config = {
         user: 'sa',
-        password: 'sa@1234',
-        server: '192.168.1.126', 
+        password: 'password',
+        server: 'server', 
         database: 'SampleTest' 
     };
     new sql.ConnectionPool(config).connect().then(pool => {
